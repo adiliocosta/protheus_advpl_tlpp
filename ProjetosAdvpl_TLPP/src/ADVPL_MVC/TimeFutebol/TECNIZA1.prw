@@ -35,5 +35,24 @@ aadd(aRotina,{'Excluir','VIEWDEF.TECNIZA1',0,5,0})
 aadd(aRotina,{'Copiar','VIEWDEF.TECNIZA1',0,6,0})
 aadd(aRotina,{'Imprimir','VIEWDEF.TECNIZA1',0,9,0})
 
-
 Return aRotina
+
+
+//Criação do ModelDef de Técnico de Futebol
+Static Function ModelDef()
+//Criação da estrutura de dados do model
+Local oStruZA1 := FWFormStruct(1,"ZA1")
+//Criação do modelo de dados
+Local oModel := MPFormModel():New('FMZA1')
+
+//Criação do componente form field do Model
+oModel:AddFields('FFMZA1',/**/,oStruZA1)
+//Criação da chave primária
+oModel:SetPrimaryKey({'ZA1_FILIAL','ZA1_COD'})
+//Adicionando descrição ao model
+oModel:SetDescription('Modelo de Dados - Tecnico de Futebol')
+//Adicionando descrição ao componente do model
+oModel:GetModel('FFMZA1'):SetDescription('Cadastro de Técnico')
+
+
+Return oModel
