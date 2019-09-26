@@ -13,4 +13,4 @@ oBrowse:SetDescription("Cadastro de Técnico de Futebol")
 //Ativando a classe
 oBrowse:Activate()
 
-Return
+Return nil
